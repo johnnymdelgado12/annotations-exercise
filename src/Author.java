@@ -1,26 +1,31 @@
-/**
- * This source file is subject to the license that is bundled with this package in the file LICENSE.
- */
+
+// * This source file is subject to the license that is bundled with this package in the file LICENSE.
+// */
 import java.util.ArrayList;
 import java.util.List;
 
-@SuppressWarnings("rawtypes unchecked")
+//@SuppressWarnings("rawtypes unchecked")
 
 public class Author extends Person {
-    private List books;
+    private List<String> books;
 
     public Author(String firstName, String lastName) {
         super(firstName, lastName);
-        books = new ArrayList();
+        books = new ArrayList<>();
     }
 
     /**
-     * @deprecated Use publishedBooks instead
+     * @deprecated Use publishedBooks instead {@link #publishedBooks()}
      */
+
     @Deprecated
     public List<String> getBooks() {
 
         return books;
+    }
+
+    public void getBook(){
+
     }
 
     public List<String> publishedBooks() {
